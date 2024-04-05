@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Classification</title>
+</head>
+<body>
+   
+    <div class="container">
+        <!-- code here -->
+        <div class="card">
+            <div class="card-image">	
+                <h2 class="card-heading">
+                    Loan Default Prediction
+                </h2>
+            </div>
+            <form class="card-form" action="{{ url_for('home')}}" method="POST">
+                <div class="input">
+                    <input name="disbursed_amount" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">disbursed_amount</label>
+                </div>
+                <div class="input">
+                    <input name="asset_cost" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">asset_cost</label>
+                </div>
+                <div class="input">
+                    <input name="Employment_Type" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Employment_Type</label>
+                </div>
+                <div class="input">
+                    <input name="Aadhar_flag" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Aadhar_flag</label>
+                </div>
+                <div class="input">
+                    <input name="PAN_flag" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">PAN_flag</label>
+                </div>
+                <div class="input">
+                    <input name="PERFORM_CNS_SCORE" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">PERFORM_CNS_SCORE</label>
+                </div>
+                <div class="input">
+                    <input name="NEW_ACCTS_IN_LAST_SIX_MONTHS" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">NEW_ACCTS_IN_LAST_SIX_MONTHS</label>
+                </div>
+                <div class="input">
+                    <input name="DELINQUENT_ACCTS_IN_LAST_SIX_MONTHS" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">DELINQUENT_ACCTS_IN_LAST_SIX_MONTHS</label>
+                </div>
+                <div class="input">
+                    <input name="NO_OF_INQUIRIES" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">NO_OF_INQUIRIES</label>
+                </div>
+                <div class="input">
+                    <input name="age" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">age</label>
+                </div>
+                <div class="input">
+                    <input name="Average_Acct_Age_Months" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Average_Acct_Age_Months</label>
+                </div>
+                <div class="input">
+                    <input name="Credit_History_Length_Months" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Credit_History_Length_Months</label>
+                </div>
+                <div class="input">
+                    <input name="Number_of_0" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Number_of_0</label>
+                </div>
+                <div class="input">
+                    <input name="Loan_to_Asset_Ratio" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Loan_to_Asset_Ratio</label>
+                </div>
+                <div class="input">
+                    <input name="No_of_Accts" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">No_of_Accts</label>
+                </div>
+                <div class="input">
+                    <input name="Tot_Inactive_Accts" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Tot_Inactive_Accts</label>
+                </div>
+                <div class="input">
+                    <input name="Tot_Overdue_Accts" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Tot_Overdue_Accts</label>
+                </div>
+                <div class="input">
+                    <input name="Tot_Current_Balance" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Tot_Current_Balance</label>
+                </div>
+                <div class="input">
+                    <input name="Tot_Sanctioned_Amount" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Tot_Sanctioned_Amount</label>
+                </div>
+                <div class="input">
+                    <input name="Tot_Disbursed_Amount" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Tot_Disbursed_Amount</label>
+                </div>
+                <div class="input">
+                    <input name="Tot_Installment" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Tot_Installment</label>
+                </div>
+                <div class="input">
+                    <input name="Bal_Disburse_Ratio" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Bal_Disburse_Ratio</label>
+                </div>
+                <div class="input">
+                    <input name="Pri_Tenure" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Pri_Tenure</label>
+                </div>
+                <div class="input">
+                    <input name="Sec_Tenure" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Sec_Tenure</label>
+                </div>
+                <div class="input">
+                    <input name="Disburse_to_Sactioned_Ratio" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Disburse_to_Sactioned_Ratio</label>
+                </div>
+                <div class="input">
+                    <input name="Active_to_Inactive_Acct_Ratio" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Active_to_Inactive_Acct_Ratio</label>
+                </div>
+                <div class="input">
+                    <input name="Credit_Risk_Label" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Credit_Risk_Label</label>
+                </div>
+                <div class="input">
+                    <input name="Sub_Risk_Label" type="number" step="any"  class="input-field" required/>
+                    <label  class="input-label">Sub_Risk_Label</label>
+                </div>
+                <div class="action">
+                    <button type="submit" class="action-button">Submit</button>
+                </div>
+            </form>
+
+            <center><p style="color: darkred; font-weight: bold;">{{ prediction }}</p></center>
+        </div>
+    </div>
+    
+</body>
+</html>
